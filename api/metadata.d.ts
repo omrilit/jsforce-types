@@ -177,7 +177,9 @@ export class DeployResultLocator<T> extends AsyncResultLocator<T> {
     // will not allow us to say this class extends AsyncResultLocator
     complete(callback?: Callback<T>): Promise<T>
 }
-export class RetrieveResultLocator<T> extends AsyncResultLocator<T> {}
+export class RetrieveResultLocator<T> extends AsyncResultLocator<T> {
+  complete(callback?: Callback<T>): Promise<T>
+}
 
 export class Metadata {
     pollInterval: number;
